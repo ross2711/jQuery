@@ -1,0 +1,50 @@
+<!-- ex3
+   Write a function called findLi to find all <li> elements that don't have the attribute name with value 'color' and add <span> with no color </span>after the
+
+   Snippet...
+
+    <div id = "exerciseTest">
+      <ul>
+        <li name="color" value="Red">Sun</li>
+        <span>Sea</span>
+        <li value="Cold Fusion">Sand</li>
+        <li name="accept" value="Evil Plans">Hill</li>
+        <span> Dale</span>
+      </ul>
+      <button id="button1">Click to see the effect</button>
+    </div> -->
+
+
+<!-- solution -->
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>JQuery Playground</title>
+      <script
+         src="https://code.jquery.com/jquery-3.2.1.js"
+         integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+         crossorigin="anonymous"></script>
+      <style>
+      </style>
+   </head>
+   <body>
+      <div id = "exerciseTest">
+         <ul>
+            <li name="color" value="Red">Sun</li>
+            <span>Sea</span>
+            <li value="Cold Fusion">Sand</li>
+            <li name="accept" value="Evil Plans">Hill</li>
+            <span> Dale</span>
+         </ul>
+         <button id="button1">Click to see the effect</button>
+      </div>
+      <script>
+         function noColor() {
+             $("<span> with no color </span>").insertAfter("li[name!='color']");
+         }
+         noColor();
+
+      </script>
+   </body>
+</html>
